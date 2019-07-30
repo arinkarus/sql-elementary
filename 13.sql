@@ -6,6 +6,12 @@
 ShipCountry и OrderPrice, строки которой должны быть отсортированы 
 по стоимости заказа в обратном порядке. */
 
+USE northwind
+GO
+
+SET DATEFORMAT YMD;
+GO
+
 SELECT TOP(10) [O].[CustomerId], [O].[ShipCountry], 
     ([D].[UnitPrice] - [D].[UnitPrice]  * [D].[Discount]) AS [OrderPrice]
     FROM [dbo].[Orders] AS [O]
@@ -31,3 +37,4 @@ WITH orders AS (
 )
 
 SELECT * FROM orders ORDER BY [OrderPrice]
+GO
