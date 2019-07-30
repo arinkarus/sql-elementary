@@ -1,4 +1,5 @@
-/*Переписать с группировкой*/
+/*Переписать
+ с группировкой*/
 SELECT DISTINCT s.CompanyName,
 (SELECT min(t.UnitPrice) FROM dbo.Products as t WHERE t.SupplierID = p.SupplierID) as MinPrice,
 (SELECT max(t.UnitPrice) FROM dbo.Products as t WHERE t.SupplierID = p.SupplierID) as MaxPrice

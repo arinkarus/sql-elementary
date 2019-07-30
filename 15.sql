@@ -2,7 +2,8 @@
 Напишите запрос, который выводит список компаний-заказчиков из Лондона, 
 которые делали заказы у сотрудников лондонского офиса и заказали доставку через службу Speedy Express.
 Результирующая таблица должна иметь колонки Customer и Employee, 
-колонка Employee должна содержать FirstName и LastName сотрудника.
+колонка 
+Employee должна содержать FirstName и LastName сотрудника.
 */
 SELECT [C].[CustomerId], CONCAT([Emp].[FirstName], [Emp].[LastName]) AS [Employee],
  [Emp].[City] AS [Employees City], [C].[City] AS [Customers City], [Sh].[CompanyName] AS [Shipping Service]
