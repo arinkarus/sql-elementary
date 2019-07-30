@@ -1,5 +1,5 @@
-/*Переписать
- с группировкой*/
+п»ї/*РџРµСЂРµРїРёСЃР°С‚СЊ
+ СЃ РіСЂСѓРїРїРёСЂРѕРІРєРѕР№*/
 SELECT DISTINCT s.CompanyName,
 (SELECT min(t.UnitPrice) FROM dbo.Products as t WHERE t.SupplierID = p.SupplierID) as MinPrice,
 (SELECT max(t.UnitPrice) FROM dbo.Products as t WHERE t.SupplierID = p.SupplierID) as MaxPrice
